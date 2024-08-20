@@ -12,13 +12,13 @@ export default function Footer() {
         </a>{" "}
         and is{" "}
         <a
-          href="https://github.com/PraiseKemi/praise-weather-app"
+          href="https://github.com/PraiseKemi/my-weather-forecast-app"
           target="_blank" rel="noreferrer"
         >
           on GitHub
         </a>{" "}
         and{" "}
-        <a href="https://my-special-weather-app.netlify.app/" target="_blank" rel="noreferrer">
+        <a href="https://jade-weather-forecast.netlify.app/" target="_blank" rel="noreferrer">
           hosted on Netlify
         </a>
       </p>
