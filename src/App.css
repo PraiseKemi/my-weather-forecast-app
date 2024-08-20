@@ -1,1 +1,55 @@
+.App {
+  background: #062925;
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+}
 
+main {
+  padding: 30px 0;
+}
+
+.currentTemperature {
+  font-size: 48px;
+}
+
+.currentWeather {
+  display: flex;
+  justify-content: space-between;
+}
+
+.currentCity {
+  color: white;
+  font-size: 38px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.currentDetails {
+  color: #b8e1dd;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.currentTemperatureIcon {
+  position: relative;
+  top: 15px;
+  font-size: 40px;
+  margin-right: -10px;
+}
+
+.currentTemperatureValue {
+  color: white;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.currentTemperatureUnit {
+  color: white;
+  font-size: 28px;
+  position: relative;
+  top: -38px;
+}
