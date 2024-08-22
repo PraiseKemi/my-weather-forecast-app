@@ -2,16 +2,18 @@ import React from "react";
 import Form from "./Form";
 import Humidity from "./Humidity";
 import Footer from "./Footer";
+import 'bootstrap/dist/css/bootstrap.css';
 
 import "./App.css";
 
 export default function App() {
   return (
     <div className="App">
+     <div className="container">
       <Form />
       <main>
-        <div className="currentWeather">
-          <div>
+        <div className="currentWeather row">
+          <div className="col-7">
             <h1 className="currentCity" id="current-city">
               Paris
             </h1>
@@ -21,7 +23,7 @@ export default function App() {
               <Humidity value={87} />
             </div>
           </div>
-          <div className="currentTemperature">
+          <div className="currentTemperature col-5">
             <span id="icon">☀️</span>
             <span className="currentTemperatureValue" id="current-temperature">
               24
@@ -31,7 +33,8 @@ export default function App() {
         </div>
         <div className="weatherForecast" id="forecast"></div>
       </main>
-      <Footer />
+        <Footer />
+      </div>
     </div>
   );
 }

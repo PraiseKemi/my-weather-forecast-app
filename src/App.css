@@ -1,10 +1,15 @@
+body {
+  background: #e0aaff;
+  font-family: "Roboto", sans-serif;
+}
+
 .App {
-  background: #062925;
+  background: #240046;
   max-width: 600px;
   margin: 60px auto;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  box-shadow: 0 4px 20px 4px #5a189a;
 }
 
 main {
@@ -28,7 +33,7 @@ main {
 }
 
 .currentDetails {
-  color: #b8e1dd;
+  color: #c77dff;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
