@@ -1,60 +1,17 @@
 body {
   background: #e0aaff;
   font-family: "Roboto", sans-serif;
+  background-image: url(weather-app-photo-2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .App {
   background: #240046;
-  max-width: 600px;
+  max-width: 650px;
   margin: 60px auto;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 20px 4px #5a189a;
-}
-
-main {
-  padding: 30px 0;
-}
-
-.currentTemperature {
-  font-size: 48px;
-}
-
-.currentWeather {
-  display: flex;
-  justify-content: space-between;
-}
-
-.currentCity {
-  color: white;
-  font-size: 38px;
-  font-weight: 900;
-  margin: 0;
-}
-
-.currentDetails {
-  color: #c77dff;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-}
-
-.currentTemperatureIcon {
-  position: relative;
-  top: 15px;
-  font-size: 40px;
-  margin-right: -10px;
-}
-
-.currentTemperatureValue {
-  color: white;
-  font-size: 80px;
-  font-weight: bold;
-}
-
-.currentTemperatureUnit {
-  color: white;
-  font-size: 28px;
-  position: relative;
-  top: -38px;
 }
