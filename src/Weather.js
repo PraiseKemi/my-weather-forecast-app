@@ -1,4 +1,6 @@
 import React from "react";
+import FormattedDate from "./FormattedDate";
+
 
 import "./Weather.css";
 
@@ -8,27 +10,28 @@ export default function Weather(props) {
         } else {
             return (
                 <main>
-                    <div className="currentWeather row">
-                        <div className="col-7">
-                            <h1 className="currentCity" id="current-city">
+                    <div className="CurrentWeather row">
+                        <div className="col-6">
+                            <h1 className="CurrentCity mb-4">
                                 {props.display.city}
                             </h1>
-                            <div className="currentDetails">
-                                <span id="current-date"></span>,
-                                <span id="current-condition">{props.display.description}</span>
+                            <div className="CurrentDetails">
+                                <span><FormattedDate date={props.display.date} /></span>,
+                                <span> {props.display.description}</span>
                                 <p>
-                                    Humidity: <span className="valueStyle">{props.display.humidity}%</span>,
-                                    Wind: <span className="valueStyle">{props.display.wind}m/s</span>
+                                    Humidity: <span className="ValueStyle">{props.display.humidity}%</span>,
+                                    Wind: <span className="ValueStyle">{props.display.wind}m/s</span>
                             
                                 </p>
                             </div>
                         </div>
-                        <div className="currentTemperature col-5">
-                            <span id="icon">☀️</span>
-                            <span className="currentTemperatureValue" id="current-temperature">
+                        <div className="CurrentTemperature col-6">
+                            <span id="icon"><img className="CurrentTemperatureIcon" src={`http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${props.display.icon}.png`} alt={`${props.display.icon}`} />
+                            </span>
+                            <span className="CurrentTemperatureValue">
                                 {props.display.temperature}
                             </span>
-                            <span className="currentTemperatureUnit">°C</span>
+                            <span className="CurrentTemperatureUnit">°C</span>
                         </div>
                     </div>
                 </main>

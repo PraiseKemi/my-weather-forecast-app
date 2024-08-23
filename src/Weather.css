@@ -2,50 +2,50 @@ main {
     padding: 30px 0;
 }
 
-.currentTemperature {
+.CurrentTemperature {
     font-size: 48px;
 }
 
-.currentWeather {
+.CurrentWeather {
     display: flex;
     justify-content: space-between;
 }
 
-.currentCity {
+.CurrentCity {
     color: white;
     font-size: 38px;
     font-weight: 900;
     margin: 0;
 }
 
-.currentDetails {
+.CurrentDetails {
     color: #c77dff;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
 }
 
-.currentTemperatureIcon {
+.CurrentTemperatureIcon {
     position: relative;
-    top: 15px;
+    top: -10px;
     font-size: 40px;
     margin-right: -10px;
 }
 
-.currentTemperatureValue {
+.CurrentTemperatureValue {
     color: white;
     font-size: 80px;
     font-weight: bold;
 }
 
-.currentTemperatureUnit {
+.CurrentTemperatureUnit {
     color: white;
     font-size: 28px;
     position: relative;
     top: -38px;
 }
 
-.valueStyle {
+.ValueStyle {
     color: white;
     font-weight: 700;
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Weather from "./Weather";
 import axios from "axios";
 
@@ -14,7 +14,9 @@ export default function Form() {
       description: response.data.condition.description,
       humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
-      city: response.data.city
+      city: response.data.city,
+      date: new Date(response.data.time * 1000),
+      icon: response.data.condition.icon
     })
   }
 
@@ -28,6 +30,13 @@ export default function Form() {
   function updateCity(event) {
     setCity(event.target.value);
   }
+
+    useEffect(() => {
+    let apiKey = "44a34b249b930f2abo9988f7a607t982";
+    let defaultCity = "Paris";
+    let url = `https://api.shecodes.io/weather/v1/current?query=${defaultCity}&key=${apiKey}&units=metric`;
+    axios.get(url).then(displayWeather);
+  }, []);
 
   return (
     <div>
