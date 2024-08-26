@@ -47,7 +47,7 @@ export default function Form() {
           placeholder="Enter a city.."
           required
           className="searchInput"
-          id="search-input"
+          autoFocus
           onChange={updateCity}
         />
         <input type="submit" value="Search" className="searchButton" />
