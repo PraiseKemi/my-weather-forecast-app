@@ -40,9 +40,17 @@ main {
 
 .CurrentTemperatureUnit {
     color: white;
-    font-size: 28px;
+    font-size: 20px;
     position: relative;
     top: -38px;
+}
+
+.CurrentTemperatureUnit a {
+    text-decoration: none;
+}
+
+.CurrentTemperatureUnit a:hover {
+    text-decoration: underline;
 }
 
 .ValueStyle {
