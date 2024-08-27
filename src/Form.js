@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Weather from "./Weather";
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 
 import "./Form.css";
@@ -16,7 +17,8 @@ export default function Form() {
       wind: response.data.wind.speed,
       city: response.data.city,
       date: new Date(response.data.time * 1000),
-      icon: response.data.condition.icon
+      icon: response.data.condition.icon,
+      coordinates: response.data.coordinates
     })
   }
 
@@ -55,6 +57,10 @@ export default function Form() {
       </header>
       <div>
         <Weather display={weather} />
+        <main>
+          <WeatherForecast coordinates={weather.coordinates} />
+        </main>
+        
       </div>
       </div>
   );

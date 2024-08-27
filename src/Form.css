@@ -3,6 +3,10 @@ header {
     padding-bottom: 30px;
 }
 
+main {
+    padding: 15px 0;
+}
+
 .searchInput {
     background-color: #f9f7fe;
     border: none;

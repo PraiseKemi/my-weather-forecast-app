@@ -10,10 +10,7 @@ export default function App() {
     <div className="App">
      <div className="container">
       <Form />
-      <main>
-        <div className="weatherForecast" id="forecast"></div>
-      </main>
-        <Footer />
+      <Footer />
       </div>
     </div>
   );

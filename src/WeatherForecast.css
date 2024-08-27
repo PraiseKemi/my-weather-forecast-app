@@ -1,0 +1,25 @@
+.weatherForecastDay {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 35px;
+}
+
+.weatherForecastWeekday {
+    font-weight: 600;
+    color: #c77dff;
+}
+
+.weatherForecastIcon {
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+}
+
+.weatherForecastTemperatureMin {
+    color: #e0aaff;
+}
+
+.weatherForecastTemperatureMax {
+    color: white;
+}
