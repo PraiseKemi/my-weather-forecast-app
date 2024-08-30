@@ -1,11 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
+import ForecastDate from "./ForecastDate";
 
 import "./WeatherForecast.css";
 
 export default function WeatherForecast(props) {
+  const [forecast, setForecast] = useState([]);
+
     function handleResponse(response) {
-        console.log(response.data);
+      setForecast(response.data.daily);
 }
 
     useEffect(() => {
@@ -17,19 +20,45 @@ export default function WeatherForecast(props) {
 
       axios.get(url).then(handleResponse);
     }
-  }, [props.coordinates]);
+    }, [props.coordinates]);
+  
+  
+  if (forecast.length > 0) {
+     return (
+      <div className="weatherForecast row">
+        {forecast.map(function(dailyForecast, index) {
+          let maxTemperature = Math.round(dailyForecast.temperature.maximum);
+          let minTemperature = Math.round(dailyForecast.temperature.minimum);
 
-    return (
-     <div className="weatherForecast row">
-        <div className="weatherForecastDay col">
-            <div className="weatherForecastWeekday">Thur</div>
-            
-            <div className="weatherForecastIcon">🌤️</div>
-            <div className="weatherForecastTemperatures">
-              <span className="weatherForecastTemperatureMax"><strong>19°</strong></span>
-              <span className="weatherForecastTemperatureMin"> 10°</span>
-            </div>
-            </div>
-     </div>
-    )
+          if (index < 5) {
+            return (
+              <div className="weatherForecastDay col" key={index}>
+                <div className="weatherForecastWeekday">
+                  <ForecastDate date={dailyForecast.time} />
+                </div>
+
+                <img
+                  className="weatherForecastIcon"
+                  src={`http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${dailyForecast.condition.icon}.png`}
+                  alt={dailyForecast.condition.icon}
+                />
+                <div className="weatherForecastTemperatures">
+                  <span className="weatherForecastTemperatureMax">
+                    <strong>{maxTemperature}°</strong>
+                  </span>
+                  <span className="weatherForecastTemperatureMin">
+                    {" "}{minTemperature}°
+                  </span>
+                </div>
+              </div>
+            );
+          } else {
+            return null;
+          }
+        })}
+      </div>
+    );
+  } else {
+    return null;
+  }
 }

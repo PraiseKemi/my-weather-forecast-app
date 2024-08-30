@@ -6,14 +6,19 @@
 }
 
 .weatherForecastWeekday {
+    margin-bottom: -15px;
     font-weight: 600;
     color: #c77dff;
 }
 
 .weatherForecastIcon {
-    font-size: 20px;
+    width: 80px;
     display: block;
     margin: 0 auto;
+}
+
+.weatherForecastTemperatures {
+    margin-top: -10px;
 }
 
 .weatherForecastTemperatureMin {
